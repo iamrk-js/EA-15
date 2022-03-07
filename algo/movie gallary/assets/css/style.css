@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.addMoviesModal {
+    margin-top: 25px;
+}
+
+#backDrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.myModal {
+    position: fixed;
+    width: 60%;
+    top: 20%;
+    min-height: 400px;
+    background-color: #fff;
+    left: 20%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
+    display: none;
+}
+.myModal.visible, #backDrop.visible{
+    display: block;
+}
+.myModal.visible{
+    animation: fade-slide-down .3s ease-out forwards;
+}
+.myModal i.fas.fa-times {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.movieDetail{
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+.movieDetail figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,.5);
+}
+.movieDetail img{
+    height: 100%;
+    width: 100%;
+}
+.movieTitle, .startRating{
+    margin: 0;
+}  
+@keyframes fade-slide-down {
+    from {
+        margin-top: -5rem;
+    }
+    to {
+        margin-top: 0rem;
+    }
+}

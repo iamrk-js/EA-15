@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid bg-success">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class=" text-white p-4">
+                    Favorite Movies
+                </h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-primary btn-lg addMoviesModal" id="addMoviesModal">Add Movies</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-4" id="movieHolder">
+           
+        </div>
+    </div>
+
+    <div id="backDrop">
+
+    </div>
+    <div id="myModal" class="myModal p-4">
+        <i class="fas fa-times MyClose"></i>
+        <div class="myModal-content">
+            <div class="form-group">
+                <label for="movieName">Movie Name</label>
+                <input type="text" class="form-control" id="movieName">
+            </div>
+            <div class="form-group">
+                <label for="imgUrl">Image Url</label>
+                <input type="text" class="form-control" id="imgUrl">
+            </div>
+            <div class="form-group">
+                <label for="rating">Your Rating</label>
+                <input type="number" min="1" max="5" class="form-control" id="rating">
+            </div>
+
+        </div>
+        <div class="myModal-actions text-right">
+            <button class="btn btn-primary" id="addMovieBtn">
+                Add Movie
+            </button>
+            <button class="btn btn-danger MyClose">
+                Cancel
+            </button>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
