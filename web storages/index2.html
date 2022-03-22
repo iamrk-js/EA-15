@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="info"></p>
+    <p id="avenger"></p>
+    <script>
+        let cl = console.log;
+        let getPerson = JSON.parse(localStorage.getItem('getPerson'));
+
+        cl(getPerson)
+    
+        document.getElementById('info').innerHTML =    `${getPerson.fname} ${getPerson.lname}`
+        // session storages
+
+        let getIronManInfo = JSON.parse(sessionStorage.getItem('getIronMan'))
+
+        document.getElementById('avenger').innerHTML = `${getIronManInfo.fname} ${getIronManInfo.lname}`
+    </script>
+</body>
+
+</html>

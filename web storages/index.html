@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="index2.html" target="_blank">Go to index2 file</a>
+    <!-- Before HTML5 >> Cookies >> 22 to 26 kb 
+    In HTML 5 >>  Web storages >> 5 mb 
+    local storages >> data stored in local storages will be there until and unless we removed it mannualy
+    session storages >> data stored in session storage will get removed as soon as session is over -->
+    <p id="info"></p>
+    <p id="avenger"></p>
+    <script>
+        // JSON >> javascript object notaion 
+        // The only one diff in JSON and javasscript object is keys in JSON are stringified
+        // database only understand JSON and javascript(JS engine) only understand javascript Objects
+        // localstorage.setItem
+        // localstorege.removeItem
+        let cl = console.log;
+        let person = {
+            fname: "Ravikrian",
+            lname: "Niturkar",
+            profile: "MEAN Stack"
+        }
+        console.log(person)
+        // we have to convert js object in to JSON >> we use JSON.stringify(js object)
+
+        let jsonPerson = JSON.stringify(person);
+        console.log(jsonPerson);
+
+        // data get from database is in JSON fromat >> we use JSON.parse(JSON object)
+
+        let objPerson = JSON.parse(jsonPerson);
+        console.log(objPerson);
+        // Web storages can only stored JSON data, then can not stored/understand javascript Object
+
+        let firstName = "Ravikiran";
+        let canDrive = false;
+
+        // let personJson = 
+        localStorage.setItem('getFirstName', firstName);
+        localStorage.setItem('getCanDrive', canDrive)
+        localStorage.setItem('getPerson', jsonPerson);
+
+        let getPerson = localStorage.getItem('getPerson');
+
+        console.log(getPerson);
+
+        let getPersonToObj = JSON.parse(getPerson)
+
+        document.getElementById('info').innerHTML = `${getPersonToObj.fname} ${getPersonToObj.lname}`;
+
+
+        // session storge
+
+        let person2 = {
+            fname: 'Tony',
+            lname: 'Stark'
+        }
+
+        sessionStorage.setItem('getIronMan', JSON.stringify(person2));
+
+        let getIronManInfo = JSON.parse(sessionStorage.getItem('getIronMan'));
+
+        document.getElementById('avenger').innerHTML = `${getIronManInfo.fname} ${getIronManInfo.lname}`
+
+    </script>
+</body>
+
+</html>
