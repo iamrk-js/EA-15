@@ -1,0 +1,15 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "work on api call in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravikiran",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "jQuery": "^1.7.4"
+  }
+}

@@ -1,0 +1,20 @@
+a:link,
+a:hover,
+a:focus{
+    text-decoration: none;
+
+}
+button{
+    padding: 10px 30px;
+    color: #fff;
+    background-color: hotpink;
+    border: 1px solid hotpink;
+    border-radius: 5px;
+    transition: all ;
+}
+button:hover,
+button:focus,
+button:active{
+    color: hotpink;
+    background-color: #fff;
+}
