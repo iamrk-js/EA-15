@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="person">
+      <p>Jhon</p>
+      <p>July</p>
+      <p>June</p>
+    </div>
+
+    <script>
+      var cl = console.log;
+      // let person = Array.from(document.querySelectorAll('.person p'));
+      let person = [...document.querySelectorAll(".person p")];
+
+      cl(person);
+      let personNames = person.map((p) => {
+        return p.textContent;
+      });
+      cl(personNames);
+
+      let comments = [
+        { id: 123, text: "Your not that bad at javaScript" },
+        { id: 124, text: "You don't have value of others time" },
+        { id: 125, text: "You are dumb." },
+        { id: 126, text: "I love your js blogs" },
+      ];
+      let id = 125;
+
+      let getIndex = comments.findIndex(comment => {
+        //   cl(comment)
+        return comment.id === id;
+        // if(comment.id === id){
+        //     return true;
+        // }
+      })
+
+      cl(getIndex)
+
+
+      let updatedComments = [...comments.slice(0,getIndex), ...comments.slice(getIndex + 1)];
+      cl(updatedComments)
+
+
+    </script>
+  </body>
+</html>

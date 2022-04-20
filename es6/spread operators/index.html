@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 4rem;
+      }
+      #jump{
+          color: #fff;
+          transition: all .2s;
+      }
+      #jump span{
+          transition: all .2s;
+          display: inline-block;
+          position: relative;
+      }
+      #jump span:hover{
+          transform: translateY(-20px) rotate(10deg) scale(2);
+          color: yellowgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 id="jump">SPREADS!</h2>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
+
+<!-- let x = 0; -->

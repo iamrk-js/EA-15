@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+
+  <body>
+    <h2 id="jump">SPREADS!</h2>
+    <script>
+      var cl = console.log;
+      let runner = ["Ravikiran", 123, 5, 12.5, 25];
+      // let nameOfRunner = runner[0];
+      // let runnerId = runner[1];
+      // let times = [];
+      // cl(nameOfRunner, runnerId)
+      // runner.forEach((t, i) => {
+      //   if(i > 1){
+      //     times.push(t)
+      //   }
+      // })
+      // cl(times);
+      let [nameOfRunner, runnerId, ...times] = runner;
+      cl(nameOfRunner, runnerId, times);
+
+      // let team = ["Viru", "Yuvaraj", "Sachin", "Kumbale", "Virat"];
+      // // let captain = team[0];
+      // // let vsCaptain = team[1];
+      // // let players = [];
+      // // team.forEach((p,i) => {
+      // //   if(i > 1){
+      // //     players.push(p)
+      // //   }
+      // // })
+      // let [captain, vsCaptain, players] = team;
+      // cl(captain, vsCaptain, players);
+
+      let team = ["Viru", "Sachin", "Yuvaraj", "Kumbale", "Virat"];
+      // let captain = team[0];
+      // let vsCaptain = team[1];
+      // let players = [];
+      // team.forEach((p,i) => {
+      //   if(i > 1){
+      //     players.push(p)
+      //   }
+      // })
+      let [captain, , vsCaptain, ...players] = team;
+      players.unshift(team[1]);
+      cl(captain, vsCaptain, players);
+    </script>
+  </body>
+</html>
+
+<!-- let x = 0; -->
